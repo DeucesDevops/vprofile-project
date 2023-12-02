@@ -12,6 +12,10 @@
         <intercept-url pattern="/welcome" access="hasRole('ROLE_USER')"/>
         <form-login login-page="/login" default-target-url="/welcome" authentication-failure-url="/login?error" username-parameter="username" password-parameter="password"/>
         <logout logout-success-url="/login?logout" />
+<<<<<<< HEAD
+=======
+	<csrf disabled="true"/>
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
     </http>
 
     <authentication-manager alias="authenticationManager">
@@ -26,4 +30,8 @@
           class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
         <beans:constructor-arg name="strength" value="11"/>
     </beans:bean>
+<<<<<<< HEAD
 </beans:beans>
+=======
+</beans:beans>
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad

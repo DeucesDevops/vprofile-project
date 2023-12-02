@@ -5,7 +5,11 @@ import javax.persistence.*;
 
 import java.io.Serializable;
 import java.util.Set;
+<<<<<<< HEAD
 /**{@author waheedk} !*/
+=======
+/**{@author imrant} !*/
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
 @Entity
 @Table(name = "user")
 public class User implements Serializable {

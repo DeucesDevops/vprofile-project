@@ -18,7 +18,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+<<<<<<< HEAD
 /**{@author waheedk}*/
+=======
+/**{@author imrant}*/
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
 @Controller
 public class UserController {
     @Autowired

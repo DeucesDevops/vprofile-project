@@ -14,7 +14,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashSet;
 import java.util.Set;
+<<<<<<< HEAD
 /** {@author waheedk} !*/
+=======
+/** {@author imrant} !*/
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
 public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     /** userRepository !*/

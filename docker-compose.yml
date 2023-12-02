@@ -1,17 +1,29 @@
+<<<<<<< HEAD
 version: "3.8"
+=======
+version: '3.8'
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
 services:
   vprodb:
     build: 
       context: ./Docker-files/db
+<<<<<<< HEAD
     image: macroni607/vprofiledb
+=======
+    image: vprocontainers/vprofiledb
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
     container_name: vprodb
     ports:
       - "3306:3306"
     volumes:
       - vprodbdata:/var/lib/mysql
     environment:
+<<<<<<< HEAD
       - MYSQL_ROOT_PASSWORD="vprodbpass"
   
+=======
+      - MYSQL_ROOT_PASSWORD=vprodbpass
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
 
   vprocache01:
     image: memcached
@@ -23,19 +35,29 @@ services:
     ports:
       - "15672:15672"
     environment:
+<<<<<<< HEAD
       - RABBITMQ_DEFAULT-USER=guest
       - RABBITMQ_DEFAULT-PASS=guest
 
+=======
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
 
   vproapp:
     build: 
       context: ./Docker-files/app
+<<<<<<< HEAD
     image: macroni607/vprofileapp
+=======
+    image: vprocontainers/vprofileapp
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
     container_name: vproapp
     ports:
       - "8080:8080"
     volumes:
       - vproappdata:/usr/local/tomcat/webapps
+<<<<<<< HEAD
   
   
   vproweb:
@@ -50,3 +72,18 @@ services:
 volumes:
   vprodbdata: {}
   vproappdata: {}
+=======
+    
+  vproweb:
+    build: 
+      context: ./Docker-files/web
+    image: vprocontainers/vprofileweb
+    container_name: vproweb
+    ports:
+      - "80:80"
+
+volumes:
+   vprodbdata: {}
+   vproappdata: {}
+  
+>>>>>>> f95b762d12759fb580e677a155c7a068e20387ad
